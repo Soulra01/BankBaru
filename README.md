@@ -4,7 +4,7 @@ Project **BANK MANAGEMENT SYSTEM**
 
 # Kelompok Baru
 
-|       |Nama|nim|
+|       |Nama|NIM|
 |-------|----|---|
 1|RADEN MUHAMMAD ALIF ARDIKA RAHARJA|2501990470|
 2|jeselyn arviana|2501966074|

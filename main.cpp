@@ -30,6 +30,8 @@ void sort();
 void swap(User*,User*);
 void atmMenu();
 void login();
+void withdraw();
+int pull(int wang);
 //function Declare(main)
 void create();
 void read();
@@ -71,7 +73,7 @@ int accValid(const char* nama) {
   FILE* fp = fopen("database.in","r");
   User temp;
   while(!feof(fp)){
-      fscanf(fp, "%s %s\n", temp.name, temp.pass);
+      fscanf(fp, "%s %s %s %llu\n", temp.name, temp.pass, temp.norek, &temp.money);
       if(!strcmp(temp.name, nama)){
           char password[10];
           printf("Masukan Password : ");
@@ -87,9 +89,70 @@ int accValid(const char* nama) {
   fclose(fp);
 }
 
+// ll int pull(ll int wang){
+//     system("clear");
+//     // wang = 0;
+//     wang -= 1000000;
+//     if(wang < 50000){
+//         printf("Saldo anda kurang\n");
+//     }
+//     else{
+//         printf("Penarikan berhasil.\n");
+//         printf("Ingin lanjutkan transaksi y/n\n");
+//     }
+//     return wang;
+// }
+
+
+// void withdraw(){
+//     system("clear");
+//     fp = fopen
+//     int s=0, x;
+//     while(!s){
+//         puts("1. 50.000");
+//         puts("2. 150.000");
+//         puts("3. 300.000");
+//         puts("4. 500.000");
+//         puts("5. 1.500.000");
+//         puts("6. 2.500.000");
+//         puts("7. Transaksi lain...");
+//         scanf("%d", &x);
+//         switch (x){
+//         case 1:
+//             currUser.money = currUser.money - 50000;
+//             // currUser.money = pull(50000);
+//             break;
+//         case 2:
+//             // pull(150000);
+//             break;
+//         case 3:
+//             // pull(300000);
+//             break;
+//         case 4:
+//             // pull(500000);
+//             break;
+//         case 5:
+//             // pull(1500000);        
+//             break;
+//         case 6:
+//             // pull(2500000);        
+//             break;
+//         case 7:
+//             system("clear");
+//             puts("Tulis nominal : ");
+//             ll int uang = 0; scanf("%lld", &uang);
+//             // pull(uang);
+//             break;
+//         }
+//     }
+// }
+
+
+
 void atmMenu(){
     system("clear");
     printf("Halo %s\n", currUser.name);
+    // withdraw();
 
 }
 
